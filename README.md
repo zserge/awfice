@@ -48,7 +48,7 @@ data:text/html,<canvas id="v"><script>d=document,d.body.style.margin=0,f=0,c=v.g
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/draw.html)
 
-## Presentation maker - 668 bytes!
+## Presentation maker - 623 bytes!
 
 Just a variant of a rich text editor with some hotkeys. There are 50 blank slides for you (I hope you don't need to bore your audience with more slides). Each slide is a rich text editor, but there are some hotkeys to make styling better:
 
@@ -64,7 +64,7 @@ Just a variant of a rich text editor with some hotkeys. There are 50 blank slide
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<style>@page{size: 6in 8in landscape;}@media print{*{border:0 !important;}}</style><body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div style="position:relative;width:90%;padding-top:60%;margin:5%;border:1px solid silver;page-break-after:always;"><div contenteditable style="outline:none;position:absolute;right:10%;bottom:10%;left:10%;top:10%;font-size:5vmin;"></div></div>';d.querySelectorAll("div>div").forEach(e=>e.onkeydown=e=>{n=e.ctrlKey&&e.altKey&&e.keyCode-49,x=["formatBlock","formatBlock","justifyLeft","justifyCenter","justifyRight","outdent","indent","insertUnorderedList"][n],y=["<h1>","<div>"][n],x&&document.execCommand(x,!1,y)})</script>
+data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div style="position:relative;width:90%;padding-top:60%;margin:5%;border:1px solid silver;page-break-after:always;"><div contenteditable style=outline:none;position:absolute;right:10%;bottom:10%;left:10%;top:10%;font-size:5vmin>';d.querySelectorAll("div>div").forEach(e=>e.onkeydown=e=>{n=e.ctrlKey&&e.altKey&&e.keyCode-49,f="formatBlock",j="justify",x=[f,f,j+"Left",j+"Center",j+"Right","outdent","indent","insertUnorderedList"][n],y=["<h1>","<div>"][n],x&&d.execCommand(x,!1,y)})</script><style>@page{size:6in 8in landscape}@media print{*{border:0 !important}}
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
