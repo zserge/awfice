@@ -12,14 +12,14 @@ Awfice is a collection of tiny office suite apps:
 * this project is only a half-joke, I actually use a few Awfice apps as quick scratchpads.
 * the only way to save your job is to save a HTML or send it to the printer/print to PDF.
 
-## Text editor - 63 bytes!
+## Text editor - 62 bytes!
 
 A simple rich text editor. Type whatever you want, it won't be saved anywhere, but it might be convenient for quick throwaway notes. You should be able to use Ctrl+B and Ctrl+I to mark text selection as bold or italic. Undo/redo should work as well. You can also copy/paste text and images from other sources.
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<body contenteditable style="line-height:1.5;font-size:20px;">
+data:text/html,<body contenteditable style="line-height:1.5;font-size:20px">
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
