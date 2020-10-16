@@ -25,7 +25,7 @@ data:text/html,<body contenteditable style="line-height:1.5;font-size:20px">
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
 
-## Spreadsheet - 712 bytes!
+## Spreadsheet - 704 bytes!
 
 A very basic spreadsheet with math formulas. It has 100 rows and 26 columns (A..Z). If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
 
