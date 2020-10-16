@@ -20,6 +20,7 @@ Copy and add to bookmarks or open in the URL bar:
 
 ```html
 data:text/html,<body contenteditable style="line-height:1.5;font-size:20px">
+
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
@@ -36,14 +37,14 @@ data:text/html,<table id="t"><script>z=Object.defineProperty,p=parseFloat;for(I=
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
 
-## Drawing app - 410 bytes!
+## Drawing app - 329 bytes!
 
 Nothing simpler than drawing on a blank canvas with mouse. Works with touch screens as well. To save your results... well, do a screenshot maybe...
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<canvas id="v"><script>d=document,d.body.style.margin=0,f=0,c=v.getContext("2d"),v.width=innerWidth,v.height=innerHeight,c.lineWidth=2,x=e=>e.clientX||e.touches[0].clientX,y=e=>e.clientY||e.touches[0].clientY,d.onmousedown=d.ontouchstart=e=>{f=1,e.preventDefault(),c.moveTo(x(e),y(e)),c.beginPath()},d.onmousemove=d.ontouchmove=e=>{f&&(c.lineTo(x(e),y(e)),c.stroke())},d.onmouseup=d.ontouchend=e=>f=0</script>
+data:text/html,<canvas id=v><script>d=document,d.body.style.margin=0,P="onpointer",c=v.getContext("2d"),v.width=innerWidth,v.height=innerHeight,c.lineWidth=2,f=0,d[P+"down"]=e=>{f=e.pointerId+1;e.preventDefault();c.beginPath();c.moveTo(e.x,e.y)};d[P+"move"]=e=>{f==e.pointerId+1&&c.lineTo(e.x,e.y);c.stroke()},d[P+"up"]=_=>f=0</script></canvas>
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/draw.html)
