@@ -1,1 +1,16 @@
+<head>
+    <script>
+        window.onload = () => {
+            let d = document, l = localStorage, g = 'notes', c = d.querySelector('body'), i = l.getItem(g);
+            if (i) c.innerHTML = i;
+            c.addEventListener('keyup', () => l.setItem(g, c.innerHTML));
+            c.addEventListener('focus', () => {
+                let h = l.getItem(g);
+                if (h) c.innerHTML = h;
+            });
+            d.body.focus();
+        };
+    </script>
+</head>
+
 <body contenteditable style=line-height:1.5;font-size:20px>
