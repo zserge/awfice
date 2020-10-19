@@ -71,6 +71,18 @@ data:text/html,$(cat beam.html)
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
 
+## Screen recorder - $(wc -c < record.html) bytes!
+
+A simple screen recorder. Click the "Start Recording" button to begin, then click the "Stop Recording" button to stop. To save your recording click the "Download recording" link.
+
+Copy and add to bookmarks or open in the URL bar:
+
+\`\`\`html
+data:text/html,$(cat record.html)
+\`\`\`
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/record.html)
+
 ## Contributions
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
