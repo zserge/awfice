@@ -69,6 +69,14 @@ data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
 
+## Screen recorder - 723 bytes!
+
+A simple screen recorder. Click the "Start Recording" button to begin, then click the "Stop Recording" button to stop. To save your recording click the "Download recording" link.
+
+Unfortunantly due to browser security restrictions, the screen can't be recorded when opened through a data url.
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/record.html)
+
 ## Contributions
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
