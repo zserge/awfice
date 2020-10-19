@@ -1,4 +1,4 @@
-# Awfice - the world smallest office suite
+# Awfice - the world's smallest office suite
 
 Awfice is a collection of tiny office suite apps:
 
@@ -10,7 +10,7 @@ Awfice is a collection of tiny office suite apps:
 * but they can't store their state, so whatever you type there would be lost on page refresh
 * which can be also sold as a "good for your privacy" feature
 * this project is only a half-joke, I actually use a few Awfice apps as quick scratchpads.
-* the only way to save your job is to save a HTML or send it to the printer/print to PDF.
+* The only way to save your job is to save a HTML or send it to the printer/print to PDF.
 
 ## Text editor - 59 bytes!
 
@@ -38,7 +38,7 @@ data:text/html,<table id=t><script>z=Object.defineProperty,p=parseFloat,s="style
 
 ## Drawing app - 327 bytes!
 
-Nothing simpler than drawing on a blank canvas with mouse. Works with touch screens as well. To save your results... well, do a screenshot maybe...
+Nothing simpler than drawing on a blank canvas with a mouse. Works with touch screens as well. To save your results... well, do a screenshot maybe...
 
 Copy and add to bookmarks or open in the URL bar:
 
@@ -73,4 +73,4 @@ data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
 
-To modify something - edit HTML files directly. There is README.sh script that re-generates the README and embeds apps code into it.
+To modify something - edit HTML files directly. There is a README.sh script that re-generates the README and embeds apps code into it.
