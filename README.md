@@ -73,11 +73,7 @@ data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div
 
 A simple screen recorder. Click the "Start Recording" button to begin, then click the "Stop Recording" button to stop. To save your recording click the "Download recording" link.
 
-Copy and add to bookmarks or open in the URL bar:
-
-```html
-data:text/html,<body style=display:grid;place-items:center;font-size:100%><video id=v style=max-width:100%;max-height:75vh;margin:10px></video><button id=b></button><a id=a style=margin:1em>Download recording</a><script>S='srcObject';C='controls';A='autoplay';M='muted';T='innerText';O='onclick';V=o=>{;i=!o;v[C]=o;v[A]=i;v[M]=i;a.hidden=i;};I=o=>{;v[S]?.getTracks().map(t=>t.stop());v[S]=null;V(o);b[T]="Start Recording";b[O]=R;};R=async ()=> {;try{;V();s=await navigator.mediaDevices.getDisplayMedia();v[S]=s;b[T]="Stop Recording";r=new MediaRecorder(s);r.ondataavailable=e=>a.download=a.href=v.src=URL.createObjectURL(e.data);r.onstop=I;r.start();b[O]=()=>r.stop();}catch(e){document.write(e+'<br>Please reload')};};I()</script></body>
-```
+Unfortunantly due to browser security restrictions, the screen can't be recorded when opened through a data url.
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/record.html)
 

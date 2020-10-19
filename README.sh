@@ -75,11 +75,7 @@ data:text/html,$(cat beam.html)
 
 A simple screen recorder. Click the "Start Recording" button to begin, then click the "Stop Recording" button to stop. To save your recording click the "Download recording" link.
 
-Copy and add to bookmarks or open in the URL bar:
-
-\`\`\`html
-data:text/html,$(cat record.html)
-\`\`\`
+Unfortunantly due to browser security restrictions, the screen can't be recorded when opened through a data url.
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/record.html)
 
