@@ -71,7 +71,7 @@ data:text/html,$(cat beam.html)
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
 
-## Code editor - $(wc -c < code.html) bytes!
+## Code editor - $(wc -c < code.html | tr -d ' ') bytes!
 
 A simple code editor. You can type in HTML, CSS & Javascript.
 
