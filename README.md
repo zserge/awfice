@@ -12,7 +12,7 @@ Awfice is a collection of tiny office suite apps:
 * this project is only a half-joke, I actually use a few Awfice apps as quick scratchpads.
 * the only way to save your job is to save a HTML or send it to the printer/print to PDF.
 
-## Text editor - 59 bytes!
+## Text editor -  59 bytes!
 
 A simple rich text editor. Type whatever you want, it won't be saved anywhere, but it might be convenient for quick throwaway notes. You should be able to use Ctrl+B and Ctrl+I to mark text selection as bold or italic. Undo/redo should work as well. You can also copy/paste text and images from other sources.
 
@@ -68,6 +68,18 @@ data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
+
+## Code editor - 686 bytes!
+
+A simple code editor. You can type in HTML, CSS & Javascript.
+
+Copy and add to bookmarks or open in the URL bar:
+
+```html
+data:text/html,<body oninput="i.srcdoc=h.value+'<style>'+c.value+'</style><script>'+j.value+'</script>'"><style>textarea,iframe{width:100%;height:50%;}body{margin:0;}textarea{width: 33.33%;font-size:18px;padding:0.5em}</style><textarea placeholder="HTML" id="h"></textarea><textarea placeholder="CSS" id="c"></textarea><textarea placeholder="JS" id="j"></textarea><iframe id="i"></iframe><script>document.querySelectorAll("textarea").forEach((t)=>t.addEventListener("keydown",function(t){var e,s;"Tab"==t.key&&(t.preventDefault(),e=this.selectionStart,s=this.selectionEnd,this.value=this.value.substring(0,e)+"  "+this.value.substring(s),this.selectionStart=this.selectionEnd=e+1)}))</script></body>
+```
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
 
 ## Contributions
 
