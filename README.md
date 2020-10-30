@@ -83,7 +83,9 @@ data:text/html,<body oninput="i.srcdoc=h.value+'<style>'+c.value+'</style><scrip
 
 ## Start screen - 4055 bytes!
 
-A single page, showing all apps with an icon. You can drag the icons to your bookmarks/favorites, so you can run them completely offline. When you click an icon, the app will be loaded from github. BTW: this page is all you need, since it contains all code (except for the help)!
+A single page, showing all apps with an icon. You can drag the icons to your bookmarks/favorites, so you can run them completely offline. When you click an icon, the app will be loaded from github. 
+
+By the way: this page is all you need, since it contains all code!
 
 Copy and add to bookmarks or open in the URL bar:
 
