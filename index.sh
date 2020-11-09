@@ -1,6 +1,7 @@
 #!/bin/bash
 function to_data_url {
 	s=$(cat "$1")
+	s=${s//&/&amp;}
 	s=${s//\"/&quot;}
 	printf "data:text/html,%s" "$s"
 }
