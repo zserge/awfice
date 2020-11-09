@@ -71,7 +71,7 @@ data:text/html,$(cat beam.html)
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
 
-## Code editor - $(wc -c < code.html) bytes!
+## Code editor - $(wc -c < code.html | tr -d ' ') bytes!
 
 A simple code editor. You can type in HTML, CSS & Javascript.
 
@@ -82,6 +82,20 @@ data:text/html,$(cat code.html)
 \`\`\`
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
+
+## Start screen - $(wc -c < index.html | tr -d ' ') bytes!
+
+A single page, showing all apps with an icon. You can drag the icons to your bookmarks/favorites, so you can run them completely offline. When you click an icon, the app will be loaded from GitHub. 
+
+By the way: this page is all you need, since it contains all code!
+
+Copy and add to bookmarks or open in the URL bar:
+
+\`\`\`html
+data:text/html,$(cat index.html)
+\`\`\`
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/index.html)
 
 ## Contributions
 
