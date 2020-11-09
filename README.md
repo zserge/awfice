@@ -81,6 +81,18 @@ data:text/html,<body oninput="i.srcdoc=h.value+'<style>'+c.value+'</style><scrip
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
 
+## Calculator -      765 bytes!
+
+A simple calculator which supports the basic operational symbol to calculate.
+
+Copy and add to bookmarks or open in the URL bar:
+
+```html
+data:text/html,<table style="text-align: center;width:80vw;margin: 0 auto;"> <tbody> <tr> <td colspan="4"><textarea></textarea></td> </tr> </tbody> <script> let d = document; let tbl = d.querySelector('tbody'); let z = d.querySelector('textarea'); let oc = (x) => z.value += x; let cl = () => z.value = ''; let re = () => { try { z.value = eval(z.value); } catch (error) { cl(); } } ;[[1, 2, 3, '+'], [4, 5, 6, '-'], [7, 8, 9, '*'], ['C', 0, '=', '/']].forEach((a) => { let r = d.createElement('tr'); r.style.lineHeight = '64px'; tbl.appendChild(r); a.forEach((b) => { let tb = d.createElement('tb'); tb.innerText = b; tb.style.padding = '16px'; tb.style.border = '1px solid'; r.appendChild(tb); tb.onclick = b === '=' ? re : b === 'C' ? cl : () => oc(b); }) }) </script> </table>
+```
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calculator.html)
+
 ## Contributions
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
