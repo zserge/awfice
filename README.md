@@ -12,7 +12,7 @@ Awfice is a collection of tiny office suite apps:
 * this project is only a half-joke, I actually use a few Awfice apps as quick scratchpads.
 * the only way to save your job is to save a HTML or send it to the printer/print to PDF.
 
-## Text editor -  59 bytes!
+## Text editor - 59 bytes!
 
 A simple rich text editor. Type whatever you want, it won't be saved anywhere, but it might be convenient for quick throwaway notes. You should be able to use Ctrl+B and Ctrl+I to mark text selection as bold or italic. Undo/redo should work as well. You can also copy/paste text and images from other sources.
 
@@ -69,26 +69,26 @@ data:text/html,<body><script>d=document;for(i=0;i<50;i++)d.body.innerHTML+='<div
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
 
-## Code editor - 686 bytes!
+## Code editor -      686 bytes!
 
 A simple code editor. You can type in HTML, CSS & Javascript.
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<body oninput="i.srcdoc=h.value+'<style>'+c.value+'</style><script>'+j.value+'</script>'"><style>textarea,iframe{width:100%;height:50%;}body{margin:0;}textarea{width: 33.33%;font-size:18px;padding:0.5em}</style><textarea placeholder="HTML" id="h"></textarea><textarea placeholder="CSS" id="c"></textarea><textarea placeholder="JS" id="j"></textarea><iframe id="i"></iframe><script>document.querySelectorAll("textarea").forEach((t)=>t.addEventListener("keydown",function(t){var e,s;"Tab"==t.key&&(t.preventDefault(),e=this.selectionStart,s=this.selectionEnd,this.value=this.value.substring(0,e)+"  "+this.value.substring(s),this.selectionStart=this.selectionEnd=e+1)}))</script></body>
+data:text/html,<body oninput="i.srcdoc=h.value+'<style>'+c.value+'</style><script>'+j.value+'</script>'"><style>textarea,iframe{width:100%;height:50%;}body{margin:0;}textarea{width: 33.33%;font-size:18px;padding:0.5em}</style><textarea placeholder="HTML" id="h"></textarea><textarea placeholder="CSS" id="c"></textarea><textarea placeholder="JS" id="j"></textarea><iframe id="i"></iframe><script>document.querySelectorAll("textarea").forEach((t)=>t.addEventListener("keydown",function(t){var e,s;"Tab"==t.key&&(t.preventDefault(),e=this.selectionStart,s=this.selectionEnd,this.value=this.value.substring(0,e)+"  "+this.value.substring(s),this.selectionStart=this.selectionEnd=e+1)}))</script></body>
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
 
-## Calculator -      765 bytes!
+## Calculator -      657 bytes!
 
 A simple calculator which supports the basic operational symbol to calculate.
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<table style="text-align: center;width:80vw;margin: 0 auto;"> <tbody> <tr> <td colspan="4"><textarea></textarea></td> </tr> </tbody> <script> let d = document; let tbl = d.querySelector('tbody'); let z = d.querySelector('textarea'); let oc = (x) => z.value += x; let cl = () => z.value = ''; let re = () => { try { z.value = eval(z.value); } catch (error) { cl(); } } ;[[1, 2, 3, '+'], [4, 5, 6, '-'], [7, 8, 9, '*'], ['C', 0, '=', '/']].forEach((a) => { let r = d.createElement('tr'); r.style.lineHeight = '64px'; tbl.appendChild(r); a.forEach((b) => { let tb = d.createElement('tb'); tb.innerText = b; tb.style.padding = '16px'; tb.style.border = '1px solid'; r.appendChild(tb); tb.onclick = b === '=' ? re : b === 'C' ? cl : () => oc(b); }) }) </script> </table>
+data:text/html,<table style="text-align: center;width:80vw;margin: 0 auto;"><tbody><tr><td colspan="4"><textarea></textarea></td></tr></tbody><script>let d=document;let tbl=d.querySelector('tbody');let z=d.querySelector('textarea');let oc=(x)=>z.value+=x;let cl=()=>z.value='';let re=()=>{try{z.value=eval(z.value);}catch(error){cl();}};[[1,2,3,'+'],[4,5,6,'-'],[7,8,9,'*'],['C',0,'=','/']].forEach((a)=>{let r=d.createElement('tr');r.style.lineHeight='64px';tbl.appendChild(r);a.forEach((b)=>{let tb=d.createElement('tb');tb.innerText=b;tb.style.padding='16px';tb.style.border='1px solid';r.appendChild(tb);tb.onclick=b==='='?re:b==='C'?cl:()=>oc(b);})})</script></table>
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calculator.html)
