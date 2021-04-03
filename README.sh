@@ -28,7 +28,7 @@ data:text/html,$(cat edit.html)
 
 ## Spreadsheet - $(wc -c < calc.html | tr -d ' ') bytes!
 
-A very basic spreadsheet with math formulas. It has 100 rows and 26 columns (A..Z). If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
+A modern looking very basic spreadsheet with math formulas. It has 150 rows and 26 columns (A..Z). It supports saving to json string and resizing cells.If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), but don't worry it doesn't let you execute any harmful javascript.Use Tab and Shift+Tab to jump up and down a row.
 
 Copy and add to bookmarks or open in the URL bar:
 
