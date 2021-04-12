@@ -28,12 +28,12 @@ data:text/html,$(cat edit.html)
 
 ## Spreadsheet - $(wc -c < calc.html | tr -d ' ') bytes!
 
-A very basic spreadsheet with math formulas. It has 100 rows and 26 columns (A..Z). If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
+A modern looking very basic spreadsheet with math formulas. It has 150 rows and 26 columns (A..Z). It supports saving to json string and resizing cells.If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), but don't worry it doesn't let you execute any harmful javascript.Use Tab and Shift+Tab to jump up and down a row.
 
 Copy and add to bookmarks or open in the URL bar:
 
 \`\`\`html
-data:text/html,$(cat calc.html)
+data:text/html;charset=utf-8,$(cat calc.html)
 \`\`\`
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
@@ -52,7 +52,7 @@ data:text/html,$(cat draw.html)
 
 ## Presentation maker - $(wc -c < beam.html | tr -d ' ') bytes!
 
-Just a variant of a rich text editor with some hotkeys. There are 50 blank slides for you (I hope you don't need to bore your audience with more slides). Each slide is a rich text editor, but there are some hotkeys to make styling better:
+Just a variant of a rich text editor with some hotkeys. You can create as many as slides you want (I hope you don't need to bore your audience with more slides). Each slide is a rich text editor, but there are some hotkeys to make styling better:
 
 * Ctrl+Alt+1: Header
 * Ctrl+Alt+2: Normal style
@@ -62,6 +62,7 @@ Just a variant of a rich text editor with some hotkeys. There are 50 blank slide
 * Ctrl+Alt+6: Outdent
 * Ctrl+Alt+7: Indent
 * Ctrl+Alt+8: Make a list
+* (Chrome,Edge etc.)Alt+N,(Firefox)Alt+Shift+N,(Mac)Ctrl+Alt+N: New Slide
 
 Copy and add to bookmarks or open in the URL bar:
 
