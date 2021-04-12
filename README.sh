@@ -33,7 +33,7 @@ A modern looking very basic spreadsheet with math formulas. It has 150 rows and 
 Copy and add to bookmarks or open in the URL bar:
 
 \`\`\`html
-data:text/html,$(cat calc.html)
+data:text/html;charset=utf-8,$(cat calc.html)
 \`\`\`
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
