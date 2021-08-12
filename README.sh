@@ -83,6 +83,18 @@ data:text/html,$(cat code.html)
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
 
+## Calculator - $(wc -c < calculator.html) bytes!
+
+A simple calculator which supports the basic operational symbol to calculate.
+
+Copy and add to bookmarks or open in the URL bar:
+
+\`\`\`html
+data:text/html,$(cat calculator.html)
+\`\`\`
+
+[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calculator.html)
+
 ## Contributions
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
