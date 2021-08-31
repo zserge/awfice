@@ -1,4 +1,5 @@
 #!/bin/sh
+WWW=${BASE_HREF:-https://zserge.com/awfice}
 cat << EOF
 # Awfice - the world smallest office suite
 
@@ -24,7 +25,7 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat edit.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
+[Try it!]($WWW/edit.html)
 
 ## Spreadsheet - $(wc -c < calc.html | tr -d ' ') bytes!
 
@@ -36,7 +37,7 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat calc.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
+[Try it!]($WWW/calc.html)
 
 ## Drawing app - $(wc -c < draw.html | tr -d ' ') bytes!
 
@@ -48,7 +49,7 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat draw.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/draw.html)
+[Try it!]($WWW/draw.html)
 
 ## Presentation maker - $(wc -c < beam.html | tr -d ' ') bytes!
 
@@ -69,7 +70,7 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat beam.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/beam.html)
+[Try it!]($WWW/beam.html)
 
 ## Code editor - $(wc -c < code.html | tr -d ' ') bytes!
 
@@ -81,7 +82,7 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat code.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/code.html)
+[Try it!]($WWW/code.html)
 
 ## Calculator - $(wc -c < calculator.html) bytes!
 
@@ -93,10 +94,10 @@ Copy and add to bookmarks or open in the URL bar:
 data:text/html,$(cat calculator.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calculator.html)
+[Try it!]($WWW/calculator.html)
 
 
-## Start screen - $(wc -c < index.html | tr -d ' ') bytes!
+## Start screen - $(wc -c < start.html | tr -d ' ') bytes!
 
 A single page, showing all apps with an icon. You can drag the icons to your bookmarks/favorites, so you can run them completely offline. When you click an icon, the app will be loaded from GitHub. 
 
@@ -105,14 +106,14 @@ By the way: this page is all you need, since it contains all code!
 Copy and add to bookmarks or open in the URL bar:
 
 \`\`\`html
-data:text/html,$(cat index.html)
+data:text/html,$(cat start.html)
 \`\`\`
 
-[Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/index.html)
+[Try it!]($WWW/start.html)
 
 ## Contributions
 
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
 
-To modify something - edit HTML files directly. There is README.sh script that re-generates the README and embeds apps code into it.
+To modify something - edit HTML files directly. There is README.sh script that re-generates the README and embeds apps code into it. See <code>.ok</code> for regenerating README and start.
 EOF

@@ -1,0 +1,11 @@
+# 1. develop
+lint: shellcheck README.sh start.sh
+# 2. Generate
+export BASE_HREF="http://[::]:8000"  # Testing with python
+export BASE_HREF="http://127.0.0.1:4000"  # Testing with jekyll
+unset BASE_HREF # Production setting
+gen: ./README.sh > README.md; ./start.sh > start.html
+# 3. Testing
+python3 -m http.server
+jekyll serve --open-url
+# .ok file format, see: https://github.com/secretGeek/ok-bash

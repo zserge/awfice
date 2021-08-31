@@ -1,4 +1,5 @@
 #!/bin/bash
+WWW=${BASE_HREF:-https://zserge.com/awfice}
 function to_data_url {
 	s=$(cat "$1")
 	s=${s//&/&amp;}
@@ -6,20 +7,20 @@ function to_data_url {
 	printf "data:text/html,%s" "$s"
 }
 function to_js_navigate {
-	printf "location.href='?https://github.com/zserge/awfice/blob/main/%s';return false" "${1//\'/\\\'}"
+	printf "location.href='%s/%s';return false" "$WWW" "${1//\'/\\\'}"
 }
 
 page=$(cat	<< EOF
 <title>Awfice</title>
 <meta charset="utf-8">
-<base href="https://htmlpreview.github.io/">
 <div>
+	<a href="$(to_data_url calculator.html)" onclick="$(to_js_navigate calculator.html)"><b>🔢</b>Calculator</a>
 	<a href="$(to_data_url edit.html)" onclick="$(to_js_navigate edit.html)"><b>📝</b>Text editor</a>
 	<a href="$(to_data_url calc.html)" onclick="$(to_js_navigate calc.html)"><b>🧮</b>Spreadsheet</a>
 	<a href="$(to_data_url draw.html)" onclick="$(to_js_navigate draw.html)"><b>🎨</b>Drawing app</a>
 	<a href="$(to_data_url beam.html)" onclick="$(to_js_navigate beam.html)"><b>📽</b>Presentation maker</a>
 	<a href="$(to_data_url code.html)" onclick="$(to_js_navigate code.html)"><b>⌨️</b>Code editor</a>
-	<a href="https://github.com/zserge/awfice"><b>ℹ️</b>Help</a>
+	<a href="https://github.com/zserge/awfice" title="Navigates away to website"><b>ℹ️</b>Help</a>
 </div>
 <footer>Draw an icon to your bookmarks to create a favelet (offline), or click to run online.</footer>
 <style>
