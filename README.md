@@ -6,11 +6,10 @@ Awfice is a collection of tiny office suite apps:
 * each less than 1KB of plain JavaScript
 * each is literally just one line of code
 * packaged as data URLs, so you can use them right away, without downloading or installing
-* you can also use them offline
-* but they can't store their state, so whatever you type there would be lost on page refresh
+* perfect for offline usage, no internet required
+* save/load to localStorage
 * which can be also sold as a "good for your privacy" feature
 * this project is only a half-joke, I actually use a few Awfice apps as quick scratchpads.
-* the only way to save your job is to save a HTML or send it to the printer/print to PDF.
 
 ## Text editor - 59 bytes!
 
@@ -24,14 +23,14 @@ data:text/html,<body contenteditable style=line-height:1.5;font-size:20px>
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
 
-## Spreadsheet - 679 bytes!
+## Spreadsheet - 998 bytes!
 
-A very basic spreadsheet with math formulas. It has 100 rows and 26 columns (A..Z). If the value in the cell starts with an "=" = it is evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
+A very basic spreadsheet with formulas and save/load capability. It has 26 columns (A..Z) and can extend to as many rows as needed. Cell that start with an "=" are evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<table id=t><script>z=Object.defineProperty,p=parseFloat;for(I=[],D={},C={},q=_=>I.forEach(e=>{try{e.value=D[e.id]}catch(e){}}),i=0;i<101;i++)for(r=t.insertRow(-1),j=0;j<27;j++)c=String.fromCharCode(65+j-1),d=r.insertCell(-1),d.innerHTML=i?j?"":i:c,i*j&&I.push(d.appendChild((f=>(f.id=c+i,f.onfocus=e=>f.value=C[f.id]||"",f.onblur=e=>{C[f.id]=f.value,q()},get=_=>{v=C[f.id]||"";if("="!=v.charAt(0))return isNaN(p(v))?v:p(v);with(D)return eval(v.slice(1))},a={get},z(D,f.id,a),z(D,f.id.toLowerCase(),a),f))(document.createElement`input`)))</script><style>#t{border-collapse:collapse}td{border:1px solid gray;text-align:right}input{border:none;width:4rem;text-align:center}</style>
+data:text/html,<a onclick="y[L.value]=JSON.stringify(C)"href=#>💾️</a> <a onclick="C=JSON.parse(y[L.value]);q()"href=#>📂</a><input id=L><a id=E download=f.csv>E</a><table id=t><script>y=localStorage,z=Object.defineProperty,p=parseFloat,s=e=>e.slice(1),R=i=>{for(r=t.insertRow(),j=0;j<27;j++)c=String.fromCharCode(64+j),d=r.insertCell(),d.innerHTML=i?j?"":i:c,i*j&&I.push(d.appendChild((f=>(f.id=c+i,f.onfocus=e=>f.value=C[f.id]||"",f.onblur=e=>{C[f.id]=f.value,q()},get=_=>{v=C[f.id]||"";if("="!=v[0])return isNaN(p(v))?v:p(v);with(D)return eval(s(v).toUpperCase())},a={get},z(D,f.id,a),f))(document.createElement`input`)))};for(I=[],D={},C={},q=_=>I.forEach(e=>{a=e.id in D?e.value=D[e.id]:0}),i=0;i<99;i++)R(i);t.onkeydown=e=>{N=p(s(m=e.target.id))+1,13==e.which&&(N>=t.rows.length&&R(N),window[m[0]+N].focus())};x=0;E.onclick=e=>E.href=URL.createObjectURL(new Blob([I.map(e=>(p(f=s(e.id))>x?(x=f,"\n"):"")+e.value)]))</script><style>#L,td{border:1px solid tan}#t{border-collapse:collapse}input{border:0}
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
@@ -98,3 +97,4 @@ data:text/html,<table style="text-align: center;width:80vw;margin: 0 auto;"><tbo
 The code is distributed under MIT license. PRs are always welcome, especially if they fix something or make the code smaller, or add features that are valuable, but do not require a lot of code.
 
 To modify something - edit HTML files directly. There is README.sh script that re-generates the README and embeds apps code into it.
+
