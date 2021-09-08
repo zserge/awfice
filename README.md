@@ -23,14 +23,14 @@ data:text/html,<body contenteditable style=line-height:1.5;font-size:20px>
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/edit.html)
 
-## Spreadsheet - 999 bytes!
+## Spreadsheet - 998 bytes!
 
 A very basic spreadsheet with formulas and save/load capability. It has 26 columns (A..Z) and can extend to as many rows as needed. Cell that start with an "=" are evaluated as a formula. You may refer to other cell values, i.e. "=(A10+A11)/A12". Under the hood it uses eval(), so be careful.
 
 Copy and add to bookmarks or open in the URL bar:
 
 ```html
-data:text/html,<meta charset=UTF-8><a onclick="L[x.value]=JSON.stringify(C)" href=#>💾️</a> <a onclick="C=JSON.parse(L[x.value]);q()" href=#>📂️</a><input id=x><table id=t><script>L=localStorage,f=(k,l)=>delete k[l.id],y=_=>t.rows.length,z=Object.defineProperty,p=parseFloat,R=i=>{for(r=t.insertRow(),j=0;j<27;j++)c=String.fromCharCode(64+j),d=r.insertCell(),d.innerHTML=i?j?"":i:c,i*j&&I.push(d.appendChild((f=>(f.id=c+i,f.className='m',f.onfocus=e=>f.value=C[f.id]||"",f.onblur=e=>{C[f.id]=f.value,q()},get=_=>{v=C[f.id]||"";if("="!=v[0])return isNaN(p(v))?v:p(v);with(D)return eval(v.slice(1))},a={get},z(D,f.id,a),z(D,f.id.toLowerCase(),a),f))(document.createElement`input`)))};for(I=[],D={},C={},q=_=>I.forEach(e=>{e.id in D?e.value=D[e.id]:0}),i=0;i<99;i++)R(i);t.addEventListener('keydown',e=>{N=p((m=e.target.id).slice(1))+1;if(e.which==13){if(N>=y())R(N);window[m[0]+N].focus()}})</script><style>td{border:1px solid tan}.m{border:none;width:99;text-align:right}#t{border-collapse:collapse}</style>
+data:text/html,<a onclick="y[L.value]=JSON.stringify(C)"href=#>💾️</a> <a onclick="C=JSON.parse(y[L.value]);q()"href=#>📂</a><input id=L><a id=E download=f.csv>E</a><table id=t><script>y=localStorage,z=Object.defineProperty,p=parseFloat,s=e=>e.slice(1),R=i=>{for(r=t.insertRow(),j=0;j<27;j++)c=String.fromCharCode(64+j),d=r.insertCell(),d.innerHTML=i?j?"":i:c,i*j&&I.push(d.appendChild((f=>(f.id=c+i,f.onfocus=e=>f.value=C[f.id]||"",f.onblur=e=>{C[f.id]=f.value,q()},get=_=>{v=C[f.id]||"";if("="!=v[0])return isNaN(p(v))?v:p(v);with(D)return eval(s(v).toUpperCase())},a={get},z(D,f.id,a),f))(document.createElement`input`)))};for(I=[],D={},C={},q=_=>I.forEach(e=>{a=e.id in D?e.value=D[e.id]:0}),i=0;i<99;i++)R(i);t.onkeydown=e=>{N=p(s(m=e.target.id))+1,13==e.which&&(N>=t.rows.length&&R(N),window[m[0]+N].focus())};x=0;E.onclick=e=>E.href=URL.createObjectURL(new Blob([I.map(e=>(p(f=s(e.id))>x?(x=f,"\n"):"")+e.value)]))</script><style>#L,td{border:1px solid tan}#t{border-collapse:collapse}input{border:0}
 ```
 
 [Try it!](https://htmlpreview.github.io/?https://github.com/zserge/awfice/blob/main/calc.html)
